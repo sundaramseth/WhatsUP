@@ -1,0 +1,39 @@
+{
+  "expo": {
+    "name": "whatsup",
+    "slug": "whatsup",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "icon": "./assets/images/whatsup.png",
+    "scheme": "myapp",
+    "userInterfaceStyle": "automatic",
+    "splash": {
+      "image": "./assets/images/home3.jpg",
+      "resizeMode": "contain",
+      "backgroundColor": "#ffffff"
+    },
+    "ios": {
+      "supportsTablet": true
+    },
+    "android": {
+      "adaptiveIcon": {
+        "foregroundImage": "./assets/images/whatsup.png",
+        "backgroundColor": "#ffffff"
+      },
+      "package": "com.sundaramseth.whatsup"
+    },
+    "web": {
+      "bundler": "metro",
+      "output": "static",
+      "favicon": "./assets/images/favicon.png"
+    },
+    "plugins": [
+      "expo-router",
+      "expo-secure-store"
+    ],
+    "experiments": {
+      "typedRoutes": true,
+      "tsconfigPaths": true
+    }
+  }
+}
