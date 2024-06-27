@@ -88,7 +88,7 @@ const Page = () => {
         try{
          if(signin === 'true'){
             const {supportedFirstFactors} = await signIn!.create({
-                identifier:phone
+                identifier:`${phone}`
             })
 
             const firstPhoneFactor: any = supportedFirstFactors.find((factor:any)=>{
