@@ -14,6 +14,11 @@ export const defaultStyles = StyleSheet.create({
         padding:10,
         gap:10
     },
+    disclamer:{
+        textAlign:'center',
+        color:Colors.gray,
+        marginVertical:20
+    },
     separator:{
         height:StyleSheet.hairlineWidth,
         backgroundColor: Colors.lightgray,

@@ -75,7 +75,7 @@ const IND_MASK = ['+', /\d/, /\d/, /\d/, ' ', /\d/, /\d/, /\d/, /\d/, /\d/, '-',
 
 
     return(
-   <KeyboardAvoidingView style={{flex:1}}>
+   <KeyboardAvoidingView keyboardVerticalOffset={keyboardVerticalOffset} style={{flex:1}}>
     <View style={styles.container}>
         {loading && <View style={[StyleSheet.absoluteFill, styles.loading]}>
         <ActivityIndicator size={"large"} color={Colors.primary} />

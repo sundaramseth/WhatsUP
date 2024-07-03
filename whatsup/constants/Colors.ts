@@ -151,5 +151,6 @@ export default {
   warning:    '#ffc107',
   danger:     '#dc3545',
   light:      '#f2f2f2',
-  dark:       '#000'
+  dark:       '#000',
+  background:'#f2f2f2'
 };

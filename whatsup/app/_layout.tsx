@@ -8,6 +8,7 @@ import { View } from 'react-native';
 import * as SecureStore from 'expo-secure-store';
 
 import {ClerkProvider, SignedIn, useAuth } from '@clerk/clerk-expo';
+import Colors from '@/constants/Colors';
 
 const CLERK_PUBLISHABLE_KEY = process.env.EXPO_PUBLIC_CLERK_PUBLISHABLE_KEY
 
@@ -71,6 +72,8 @@ if(!isLoaded) return;
 
 const inTabsGroup = segments[0] === '(tabs)';
 
+console.log('isSignedin', isSignedIn)
+
 if(isSignedIn && !inTabsGroup){
   router.replace("/(tabs)/chats");
 }else if (!isSignedIn){
@@ -88,6 +91,21 @@ if(isSignedIn && !inTabsGroup){
     <Stack.Screen name="index" options={{ headerShown: false }} />
     <Stack.Screen name="otp" options={{ headerTitle: 'Enter Your Phone Number' , headerBackVisible:false}} />
     <Stack.Screen name="verify/[phone]" options={{ headerTitle: 'Verify Your Phone Number' , headerBackTitle:'Edit number'}} />
+   <Stack.Screen name="(tabs)" options={{headerShown:false}} />
+   <Stack.Screen name="(modals)/new-chat" 
+   options={{
+    presentation:'modal',
+    title:'New Chat',
+    headerTransparent:true,
+    headerBlurEffect:'regular',
+    headerStyle:{
+      backgroundColor:Colors.background
+    },
+    headerSearchBarOptions:{
+      placeholder:'Search name or number',
+      hideWhenScrolling:false
+    }
+     }} />
   </Stack>
   );
 }
